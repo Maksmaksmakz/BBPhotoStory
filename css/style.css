@@ -1,11 +1,3 @@
-.mythumbnail{
-	margin-bottom: 25px;
-}
-
-.mythumbnail:hover {
-	opacity: 0.7;
-}
-
 .headerImage{
 	margin-right: :0px;
 	padding-right: :0px;
@@ -16,32 +8,27 @@
 }
 
 .BBHeader{
-	height:168px;
+	height:120px;
 	margin-bottom: 30px;
-
-
-
-	
 }
 
 .headline{
 	margin-bottom: 15px;
 }
 
-.line-separator{
+.headline h1{
+	font-family: Tw Cen MT Condensed;
+	font-size : 55px;
+}
 
+.line-separator{
 	height:2px;
 	background:#2a4884;
 	margin-bottom:20px;
 }
 
 .mythumbnail {
-	width: 100%;
-}
-
-
-.top-buffer{
-	margin-top: 30px; 
+	padding-bottom:25px;
 }
 
 .modal-content {
@@ -55,7 +42,59 @@
 }
 
 .closeButton{
-	text-align: right;
+	text-align: center;
 	display:inline;
 	color: #ffffff;
 }
+
+.tag-selection{
+	margin-bottom:17px;
+}
+
+.caption {
+    position:absolute;
+    right:0;
+    top:0;
+    width:100%;
+    height:100%;
+    display:none;
+    text-align:center;
+    color:#8a8a8a;
+    z-index:0;
+}
+
+.caption-background{
+	background: #fff;
+  	filter: alpha(opacity=60);
+  	/* IE */
+    -moz-opacity: 0.6;
+	/* Mozilla */
+  	opacity: 0.6;
+  	/* CSS3 */
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	height: 100%;
+  	width: 100%;
+  	z-index: 0;
+}
+
+.caption-text{
+	position: relative;
+	text-align:center;
+  	left: 0;
+  	padding-left:20px;
+  	padding-right:20px;
+  	width: 100%;
+  	height: 100%;
+  	color: #282828;
+  	z-index: 1;
+	cursor:pointer;
+}
+
+.container-full {
+  	margin: 0 auto;
+ 	width: 100%;
+}
+
+ 
