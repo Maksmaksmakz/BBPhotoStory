@@ -14,7 +14,6 @@
 
             function changeActiveImage(index){
                 controller.activeImage = index;
-                console.log(controller.imageTags);
             }
 
             handleImagesLoaded = function(data, status){
