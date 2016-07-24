@@ -1,2 +1,3 @@
 # BBPhotoStory
-Solution to AssignmenPlease run bower-install in the root directory to install the neccessary libraries.
+Solution to Assignmen
+Please run bower-install in the root directory to install the neccessary libraries.
