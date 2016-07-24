@@ -1,10 +1,10 @@
 [
-    {
-        "tag" : "Anno Online", 
+    {   
+        "tag" : "Anno Online", //Tags for filtering the images in the html view 
         "image_path" : "img/image_01.jpg", 
         "thumbnail_path": "img/image_01_thumb.png", 
-        "header": "Anno Online",
-        "description": "Play Anno in the Browser!"
+        "header": "Anno Online", //Header for the tooltip overlay on the thumbnail
+        "description": "Play Anno in the Browser!" //body for the tooltip overlay on the thumbnail
     },
     {
         "tag" : "Heroes of Might and Magic", 

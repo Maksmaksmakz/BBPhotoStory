@@ -4,27 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>BB Photostory</title>
-        <!-- CSS -->
+<!-- CSS -->
         <link rel="stylesheet" 
             href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <!-- JS LIBRARIES -->
+<!-- JS LIBRARIES -->
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
      
-        <!-- CUSTOM JS -->
+<!-- CUSTOM JS -->
         <script src ="js/app.js"></script>
         <script src ="js/controllers/list.js"></script>
     </head>
 
     <body>
-    
+<!-- Header Container with Logo -->
         <div class="container-full">
             <div class=" BBHeader">
-
                 <div class = "headerImage"> 
                     <div class = "container">       
                         <img src = "img/logo-small.png" style = "margin-top:10px; margin-bottom:10px"/>
@@ -32,39 +31,41 @@
                 </div>
             </div>
         </div>
+
         <div class = "container">
             <div class = "headline"><h1>Photo Stories</h1></div>
-             <div class = "line-separator"></div>
-
+            <div class = "line-separator"></div>
+<!--Tag Selection -->        
             <div ng-controller = "listCtrl as list">
                 <div class = "tag-selection">
                     <select class = "form-control" ng-model = "imageTags" ng-options = "tag for tag in list.imageTags">
                         <option value ="">All</option>
                     </select>
                 </div>
-
+<!-- Image Gallery -->
                 <div class = "row">
+                    <!-- ng-repeat to go through the list of images and create html for each and using filter by tags. if the selected tag is undefined all images are shown -->
                     <div class = "col-md-3 col-sm-6 col-xs-12" ng-repeat = "image in list.imageData | filter : (imageTags || undefined)">
                         <div class ="mythumbnail" mytooltip>
+                    <!-- the caption is triggered by a custom hover event in app.js and triggers a modal for showing the full-size image. also calls a function in the controller for changing the selected image -->
                             <div class="caption" data-toggle ="modal" title="{{image.description}}" data-target= "#image-full-size" ng-click = "list.changeActiveImage(image)">
                                 <div class= "caption-text">
                                     <h3>{{image.header}}</h3>
                                     <p>{{image.description}}</p>
                                 </div>
-                                <div class= "caption-background">
-                                    
-                                </div>
+                                <div class= "caption-background"></div>
                             </div>
+                    <!-- the image path from the json file is used to locate the image -->
                             <img ng-src ="{{image.thumbnail_path}}" class = "img-responsive" style = "width : 100%">
                         </div>
                     </div>        
                 </div>
                 <div class = "modal" id = "image-full-size">
                     <div class ="modal-body">
-                            <div class = "container" >
-                                <img ng-src ="{{list.activeImage.image_path}}" class = "img-responsive modal-content">
-                                <a class = "closeButton" href link ="#" data-toggle ="modal" data-target= "#image-full-size" ><strong>Close</strong></a>
-                            </div>
+                        <div class = "container" >
+                            <img ng-src ="{{list.activeImage.image_path}}" class = "img-responsive modal-content">
+                            <a class = "closeButton" href link ="#" data-toggle ="modal" data-target= "#image-full-size" ><strong>Close</strong></a>
+                        </div>
                     </div>
                 </div>
             </div>
