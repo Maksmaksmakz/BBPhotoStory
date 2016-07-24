@@ -1,0 +1,61 @@
+.mythumbnail{
+	margin-bottom: 25px;
+}
+
+.mythumbnail:hover {
+	opacity: 0.7;
+}
+
+.headerImage{
+	margin-right: :0px;
+	padding-right: :0px;
+	margin-left: :0px;
+	margin-top: 30px; 
+	background-color: #dfdfdf;
+	width: absolute;
+}
+
+.BBHeader{
+	height:168px;
+	margin-bottom: 30px;
+
+
+
+	
+}
+
+.headline{
+	margin-bottom: 15px;
+}
+
+.line-separator{
+
+	height:2px;
+	background:#2a4884;
+	margin-bottom:20px;
+}
+
+.mythumbnail {
+	width: 100%;
+}
+
+
+.top-buffer{
+	margin-top: 30px; 
+}
+
+.modal-content {
+    margin: auto;
+    width: 100%;
+}
+
+.modal {
+    position: fixed; /* Stay in place */
+    padding-top: 100px; /* Location of the box */
+}
+
+.closeButton{
+	text-align: right;
+	display:inline;
+	color: #ffffff;
+}

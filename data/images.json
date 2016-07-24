@@ -1,0 +1,50 @@
+[
+    {
+        "tag" : "Anno Online", 
+        "image_path" : "img/image_01.jpg", 
+        "thumbnail_path": "img/image_01_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Heroes of Might and Magic", 
+        "image_path" : "img/image_02.jpg", 
+        "thumbnail_path": "img/image_02_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Panzer General Online", 
+        "image_path" : "img/image_03.jpg", 
+        "thumbnail_path": "img/image_03_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Die Siedler Online The Settlers", 
+        "image_path" : "img/image_04.jpg", 
+        "thumbnail_path": "img/image_04_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Anno Online", 
+        "image_path" : "img/image_05.jpg", 
+        "thumbnail_path": "img/image_05_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Heroes of Might and Magic",
+        "image_path" : "img/image_06.jpg", 
+        "thumbnail_path": "img/image_06_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Panzer General Online", 
+        "image_path" : "img/image_07.jpg", 
+        "thumbnail_path": "img/image_07_thumb.png", 
+        "description": "Image 01 Description"
+    },
+    {
+        "tag" : "Die Siedler Online The Settlers",
+        "image_path" : "img/image_08.jpg", 
+        "thumbnail_path": "img/image_08_thumb.png", 
+        "description": "Image 01 Description"
+    }  
+]

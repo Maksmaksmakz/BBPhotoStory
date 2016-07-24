@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="photoStory">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BB Photostory</title>
+    <!-- Bootstrap css and my own css -->
+    <link rel="stylesheet" 
+        href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+        <!-- third party js -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+    <!-- Our application scripts -->
+    <script src ="js/app.js"></script>
+    <script src ="js/controllers/list.js"></script>
+</head>
+<body>
+
+        <div class="container BBHeader">
+            <div class = "headerImage">        
+                <img src = "img/logo-small.png" style = "margin-top:10px; margin-bottom:10px"/>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class = "headline"><h1>Photo Stories</h1></div>
+         <div class = "line-separator"></div>
+
+        <div ng-controller = "listCtrl as list">
+
+<!--
+            <select ng-model = "categories" ng-options = "category for category in imageCategories">
+                <option value = "">All</option>
+            </select>
+            -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+            <div class = "row">
+                <div class = "col-md-3 col-sm-6 col-xs-12 " ng-repeat = "image in list.data">
+                        <img ng-src ="{{image.thumbnail_path}}" class = "img-responsive mythumbnail" data-toggle ="modal" title="{{image.description}}" data-target= "#image-full-size" ng-click = "list.changeActiveImage(image)">
+                </div>
+            </div>
+
+            <div class = "modal" id = "image-full-size">
+                    <div class ="modal-body">
+                            <div class = "container" >
+                                <img ng-src ="{{list.activeImage.image_path}}" class = "img-responsive modal-content">
+                                <a class = "closeButton" href link ="#" data-toggle ="modal" data-target= "#image-full-size" ><strong>Close<strong></a>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
